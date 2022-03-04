@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<style>
+body {
+	background-image:
+		url("https://wallpapertag.com/wallpaper/full/e/7/5/156694-white-gradient-background-1920x1080-for-lockscreen.jpg");
+}
+</style>
+
+
+	
+		<h1>Placement Registation</h1>
+
+		
+
+			<div class="red" align="center">
+				<div class="panel-body" align="center">
+					<table class="table">
+						<thead class="thead-dark">
+							<tr>
+
+								<th>CompanyName</th>
+								<th>CompanyLocation</th>
+								<th>Email</th>
+								<th>Qualification_Required</th>
+								<th>Role</th>
+								<th>Skills</th>
+								<th>Posted_Date</th>
+								
+
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="appliedJob: ${appliedjoblist }">
+
+								<td th:text="${appliedJob.companyname}">CompanyName</td>
+								<td th:text="${appliedJob.companylocation}">CompanyLocation</td>
+								<td th:text="${appliedJob.companyemail}">Email</td>
+								<td th:text="${appliedJob.qualification_required}">Qualification_Required</td>
+								<td th:text="${appliedJob.role}">Role</td>
+								<td th:text="${appliedJob.skills}">Skills</td>
+								<td th:text="${appliedJob.posteddate}">Posted_Date</td>
+								
+
+
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+
+		
+</body>
+</html>

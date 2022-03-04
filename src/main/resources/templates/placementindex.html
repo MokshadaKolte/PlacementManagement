@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<style>
+body {
+	background-image:
+		url("https://wallpapertag.com/wallpaper/full/e/7/5/156694-white-gradient-background-1920x1080-for-lockscreen.jpg");
+}
+</style>
+
+
+
+	<h1>Placement Registation</h1>
+	<tr>
+		<div align="left">
+			<h3>
+				<a th:href="@{'/placementnew'}">Add new</a>
+			</h3>
+			<h3>
+				<a th:href="@{'/adminindex'}">Home</a>
+			</h3>
+		</div>
+
+	</tr>
+
+
+	<div class="red" align="center">
+		<div class="panel-body" align="center">
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th>ID</th>
+						<th>CompanyName</th>
+						<th>CompanyLocation</th>
+						<th>Email</th>
+						<th>Qualification_Required</th>
+						<th>Role</th>
+						<th>Skills</th>
+						<th>Posted_Date</th>
+						<th>Salary</th>
+
+						<th>Edit</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="company : ${listcompany }">
+						<td th:text="${company.id}">ID</td>
+						<td th:text="${company.companyname}">CompanyName</td>
+						<td th:text="${company.companylocation}">CompanyLocation</td>
+						<td th:text="${company.companyemail}">Email</td>
+						<td th:text="${company.qualification_required}">Qualification_Required</td>
+						<td th:text="${company.role}">Role</td>
+						<td th:text="${company.skills}">Skills</td>
+						<td th:text="${company.posteddate}">Posted_Date</td>
+						<td th:text="${company.salary}">Salary</td>
+
+						<td><a th:href="@{'/edit/' + ${company.id}}">Edit</a></td>
+						<td><a th:href="@{'/delete/' + ${company.id}}">Delete</a></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+	</tr>
+
+	</tbody>
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin</title>
+<style>
+.style1 {
+ 
+  padding: 100px;
+  background: url(https://www.freelancinggig.com/blog/wp-content/uploads/2018/07/Programming-Language-for-Job-placements.jpg);
+  background-repeat: no-repeat;
+   background-size: 2050px 850px; 
+}
+marquee {
+	font-size: 30px;
+	font-weight: 800;
+	color: Red;
+	font-family: sans-serif;
+}
+
+</style>
+
+</head>
+<body >
+<div class=style1>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <div>
+			<b><marquee 
+					behavior="alternate" direction="left">Welcome To Admin Page!!!!!!!!</marquee></b>
+
+
+		</div>
+    
+   
+   <b style="color:black">COMPANY DETAILS</b> &nbsp;&nbsp;&nbsp;<a th:href="@{'/placementindex'}"><input type="submit" class="btn btn-info" value="Open" /></a><br><br><br>
+    <b style="color:black">JOBSEEKER DETAILS</b> &nbsp;&nbsp;&nbsp;<a th:href="@{'/jobseekerdetails'}"><input type="submit" class="btn btn-info" value="Open" /></a><br><br><br>
+  
+   <form th:action="@{/logout}" method="post">
+        <input type="submit"  value="Logout" /class="btn btn-info">
+    </form>
+    </div>
+</body>
+</html>

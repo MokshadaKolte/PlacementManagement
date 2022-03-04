@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<style>
+body {
+	background-image:
+		url("https://images.vexels.com/media/users/3/168640/raw/1a4e28c67aaaf97a6102caf2c840959a-line-squares-gradient-background-design.jpg");
+}
+</style>
+
+	<div align="center">
+		<div>
+			<h1>Create New Placement Data</h1>
+			<br />
+			<tr>
+				<div align="left">
+					<h3>
+						
+					</h3>
+
+
+				</div>
+
+			</tr>
+		</div>
+	</div>
+	<div align="center">
+	<div class="col-sm-4">
+		<form action="#" th:action="@{/save}" th:object="${company}"
+			method="post">
+
+
+			<div aligh="left">
+				<tr>
+					<label class="form-label">CompanyName</label>
+					<td><input type="hidden" th:field="*{id}" /> <input
+						type="text" th:field="*{companyname}" class="form-control"
+						placeholder="companyname" /></td>
+				</tr>
+			</div>
+
+			<div aligh="left">
+
+				<tr>
+					<label class="form-label">CompanyLocation</label>
+					<td><input type="text" th:field="*{companylocation}"
+						class="form-control" placeholder="companylocation" /></td>
+				</tr>
+			</div>
+			<div aligh="left">
+				<tr>
+					<label class="form-label">CompanyEmail</label>
+					<td><input type="text" th:field="*{companyemail}"
+						class="form-control" placeholder="companyemail" /></td>
+				</tr>
+			</div>
+
+			<div aligh="left">
+				<tr>
+					<label class="form-label">Qualification</label>
+					<td><input type="text" th:field="*{qualification_required}"
+						class="form-control" placeholder="Qualification" /></td>
+				</tr>
+			</div>
+
+			<div aligh="left">
+				<tr>
+					<label class="form-label">Role</label>
+					<td><input type="text" th:field="*{role}" class="form-control"
+						placeholder="role" /></td>
+				</tr>
+			</div>
+			<div alight="left">
+				<tr>
+					<label class="form-label">Skills</label>
+					<td><input type="text" th:field="*{skills}"
+						class="form-control" placeholder="skills" /></td>
+				</tr>
+			</div>
+			<div alight="left">
+				<tr>
+					<label class="form-label">Salary</label>
+					<td><input type="text" th:field="*{salary}"
+						class="form-control" placeholder="salary" /></td>
+				</tr>
+			</div>
+			<div aligh="left">
+				<tr>
+					<label class="form-label">Posted_Date</label>
+					<td><input type="text" th:field="*{posteddate}"
+						class="form-control" placeholder="posteddate" /></td>
+				</tr>
+			</div>
+
+
+
+
+			<br>
+	       
+				<td colspan="2"><button type="submit" class="btn btn-info">Save</button>
+				</td>
+			
+		</form>
+	</div>
+</body>
+</html>

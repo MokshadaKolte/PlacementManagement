@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+	crossorigin="anonymous"></script>
+
+
+<title>JobSeeker Sign Up</title>
+</head>
+<body>
+	<style>
+body {
+	background-image:
+		url("https://images.vexels.com/media/users/3/168640/raw/1a4e28c67aaaf97a6102caf2c840959a-line-squares-gradient-background-design.jpg");
+}
+</style>
+
+	<div align="center">
+		<div>
+			<b><h1 style="font-size:30px; height:30px">CREATE NEW USER ACCOUNT</h1></b>
+			<br />
+		</div>
+	</div>
+	<div align="center">
+		<div class="col-sm-4">
+			<form action="#" th:action="@{/registerjobseeker}"
+				th:object="${jobseeker}" method="post">
+
+				<div aligh="left">
+					<tr>
+						<label class="form-label">FullName</label>
+						<td><input type="text" th:field="*{name}"
+							class="form-control" placeholder="Enter FullName" /></td>
+					</tr>
+				</div>
+
+				<div alight="left">
+
+					<tr>
+						<label class="form-label">DOB</label>
+						<td><input type="text" th:field="*{dob}" class="form-control"
+							placeholder="Enter DOB" /></td>
+					</tr>
+				</div>
+				<div alight="left">
+					<tr>
+						<label class="form-label">UserName</label>
+						<td><input type="text" th:field="*{username}"
+							class="form-control" placeholder="Enter Username" /></td>
+					</tr>
+				</div>
+
+				<div alight="left">
+					<tr>
+						<label class="form-label">Password</label>
+						<td><input type="password" th:field="*{password}"
+							class="form-control" placeholder="Enter Password" /></td>
+					</tr>
+				</div>
+
+				<div alight="left">
+					<tr>
+						<label class="form-label">Mobile No</label>
+						<td><input type="text" th:field="*{phoneno}"
+							class="form-control" placeholder="Enter MobileNo" /></td>
+					</tr>
+				</div>
+				<div alight="left">
+					<tr>
+						<label class="form-label">Address</label>
+						<td><input type="text" th:field="*{location}"
+							class="form-control" placeholder="Enter Location" /></td>
+					</tr>
+				</div>
+				<div alight="left">
+					<tr>
+						<label class="form-label">Education</label>
+						<td><input type="text" th:field="*{education}"
+							class="form-control" placeholder="Enter Highest Education" /></td>
+					</tr>
+				</div>
+				<div alight="left">
+					<tr>
+						<label class="form-label">Skills</label>
+						<td><input type="text" th:field="*{skills}"
+							class="form-control" placeholder="Enter Skills" /></td>
+					</tr>
+				</div>
+				<div alight="left">
+					<tr>
+						<label class="form-label">Experience</label>
+						<td><input type="text" th:field="*{experience}"
+							class="form-control" placeholder="Enter Experience" /></td>
+					</tr>
+				</div>
+				<div alight="left">
+					<tr>
+						<label class="form-label">Email</label>
+						<td><input type="text" th:field="*{email}"
+							class="form-control" placeholder="Enter Email" /></td>
+					</tr>
+				</div>
+				<div alight="left">
+					<tr>
+						<label class="form-label">PassOutYear</label>
+						<td><input type="text" th:field="*{passoutyear}"
+							class="form-control" placeholder="Enter Passout Year" /></td>
+					</tr>
+				</div>
+				<div alight="left">
+					<tr>
+						<label class="form-label">Gender</label>
+						<td><input type="text" th:field="*{gender}"
+							class="form-control" placeholder="Enter Gender" /></td>
+					</tr>
+				</div>
+				<div alight="left">
+					<tr>
+						<label class="form-label">Age</label>
+						<td><input type="text" th:field="*{age}" class="form-control"
+							placeholder="Enter Age" /></td>
+					</tr>
+				</div>
+				<br>
+				<tr>
+
+					<td colspan="2"><button type="submit" class="btn btn-info">Save</button>
+					</td>
+					<td colspan="2"><button type="reset" class="btn btn-info">Reset</button></td>
+				</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
